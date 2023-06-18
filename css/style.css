@@ -60,6 +60,7 @@ body {
 
 h1 {
     font-family:'Fraunces', serif;
+    color: var(--DarkBlue);
     font-size: 30px;
     width: 60%;
     margin: 0 0 30px 30px;
@@ -92,6 +93,7 @@ footer {
 .cart-btn {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 button {
@@ -108,6 +110,17 @@ button {
     font-weight: bold;
 }
 
+.btn--visible {
+    z-index: 5;
+    position: absolute;
+}
+
+.btn--hidden {
+    z-index: 2;
+    position: absolute;
+    background-color: hsl(158, 34%, 17%);
+}
+
 svg {
     margin-right: 10px;
 }
@@ -115,6 +128,19 @@ svg {
 .attribution {
     display: flex;
     justify-content: center;
+}
+
+.btn--visible:hover {
+    z-index: -5;
+
+}
+
+.btn--hidden:hover {
+    z-index: 5;
+}
+
+.btn--visible:hover + button {
+    z-index: 5;
 }
 
 @media screen and (max-width: 375px) {
