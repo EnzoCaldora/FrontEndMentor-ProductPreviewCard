@@ -118,7 +118,7 @@ button {
 .btn--hidden {
     z-index: 2;
     position: absolute;
-    background-color: hsl(158, 34%, 17%);
+    background-color: hsl(158, 34%, 15%);
 }
 
 svg {
